@@ -200,7 +200,7 @@ const AuthenticatedLayout = () => {
                         </div>
                     </header>
 
-                    <main className="bg-white flex flex-1 flex-col gap-4 p-3 lg:gap-6 lg:p-6">
+                    <main className="bg-slate-300 flex flex-1 flex-col gap-4 p-3 lg:gap-6 lg:p-6">
                         <Outlet />
                     </main>
                 </div>

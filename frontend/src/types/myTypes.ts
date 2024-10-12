@@ -19,7 +19,9 @@ export type Usuario = {
     id: string
     nombres: string
     apellidos: string
+    genero: string
     email: string
+    password?: string
     role: string
 }
 

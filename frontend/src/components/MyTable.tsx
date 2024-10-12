@@ -105,14 +105,14 @@ const MyTable = ({ myData, myColumns, rowsName }: TableProps) => {
                 />
             </div>
 
-            <div className="bg-slate-100 dark:bg-slate-700 rounded-lg border border-slate-300 dark:border-gray-700">
+            <div className="bg-slate-100 dark:bg-slate-700 rounded-lg border border-slate-300 dark:border-gray-700 shadow-xl shadow-slate-500">
                 <Table>
                     <TableHeader>
                         {table?.getHeaderGroups().map((headerGroup) => (
                             <TableRow key={headerGroup.id} className='border-b border-slate-400'>
                                 {headerGroup.headers.map((header) => {
                                     return (
-                                        <TableHead key={header.id} className='text-gray-900 dark:text-gray-200 font-semibold text-sm'>
+                                        <TableHead key={header.id} className='text-gray-900 dark:text-gray-200 text-sm font-bold'>
                                             {header.isPlaceholder
                                                 ? null
                                                 : flexRender(
@@ -125,6 +125,7 @@ const MyTable = ({ myData, myColumns, rowsName }: TableProps) => {
                             </TableRow>
                         ))}
                     </TableHeader>
+
                     <TableBody>
                         {table?.getRowModel()?.rows?.length > 0 ? (
 
@@ -136,7 +137,7 @@ const MyTable = ({ myData, myColumns, rowsName }: TableProps) => {
                                         className='text-sm hover:bg-slate-200 dark:hover:bg-slate-600 border-y border-slate-400'
                                     >
                                         {row?.getVisibleCells().map((cell) => (
-                                            <TableCell key={cell.id} className='font-normal text-gray-800 dark:text-gray-300'>
+                                            <TableCell key={cell.id} className='font-normal text-gray-900 dark:text-gray-300'>
                                                 {flexRender(cell.column.columnDef.cell, cell?.getContext())}
                                             </TableCell>
                                         ))}

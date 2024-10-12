@@ -81,6 +81,7 @@ const LoginPage = () => {
                 id: '5245-6359-6548',
                 nombres: 'SUPER',
                 apellidos: 'ADMIN',
+                genero: 'M',
                 email: values.email,
                 role: role
             }
@@ -95,6 +96,7 @@ const LoginPage = () => {
                 id: '2298-3021-8851',
                 nombres: 'JUAN',
                 apellidos: 'MATEO SOLANO',
+                genero: 'M',
                 email: values.email,
                 role: role
             }
@@ -167,7 +169,7 @@ const LoginPage = () => {
                                     </div>
 
                                     <div className='pt-8 grid grid-cols-2 justify-strech gap-1'>
-                                        <Button type="button" className='bg-amber-400 hover:bg-amber-500 text-base font-bold text-black' onClick={() => addUserToInputs('ADMIN')}>Admin</Button>
+                                        <Button type="button" className='bg-amber-300 hover:bg-amber-400 text-base font-bold text-black' onClick={() => addUserToInputs('ADMIN')}>Admin</Button>
                                         <Button type="button" className='bg-red-500 hover:bg-red-600 text-base font-bold' onClick={() => addUserToInputs('BIBLIOTECARIO')}>Bibliotecario</Button>
                                         {/* <Button type="button" className='bg-blue-500' onClick={() => addUserToInputs('CLIENTE 2')}>Cliente 2</Button> */}
                                         {/* <Button type="button" className='bg-red-500' onClick={() => addUserToInputs('DELETE')}>Borrar</Button> */}

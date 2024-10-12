@@ -195,7 +195,7 @@ const CategoriesPage = () => {
 
         // Check if this category has books attached 
 
-        if (theCategory?.products?.length === 0) {
+        if (theCategory?.books?.length === 0) {
             setSelectedCategoryToDelete(theCategory)
             setCanBeDeletedDialog(true)
         } else {
@@ -250,7 +250,7 @@ const CategoriesPage = () => {
                         <SheetContent
                             onInteractOutside={event => event.preventDefault()}
                             onOpenAutoFocus={(e) => e.preventDefault()}
-                            className='bg-slate-300 dark:bg-gray-800 overflow-y-auto'
+                            className='bg-slate-300 dark:bg-gray-800 w-full sm:max-w-md overflow-y-auto'
                             side="right"
                         >
                             <SheetHeader className='pt-4 pl-3 pb-3 bg-slate-800'>
@@ -262,7 +262,7 @@ const CategoriesPage = () => {
                                     }
                                 </SheetTitle>
                                 <SheetDescription className='text-gray-200 text-base text-center'>
-                                    {isUpdateActive ? 'Actualiza esta categoría de la biblioteca' : 'Agrega categorías a la biblioteca'}
+                                    {isUpdateActive ? 'Actualiza esta categoría' : ''}
                                 </SheetDescription>
                             </SheetHeader>
                             <Form {...formToCreateCategory}>
@@ -325,7 +325,7 @@ const CategoriesPage = () => {
                     <AlertDialogHeader>
                         <AlertDialogTitle className='text-2xl text-red-700 text-center'>{selectedCategoryToDelete?.nombre}</AlertDialogTitle>
                         <AlertDialogDescription className='text-base text-gray-900 text-center'>
-                            No se puede eliminar esta categoría, porque hay productos que dependen de ella.
+                            No se puede eliminar esta categoría, porque hay libros que dependen de ella.
                         </AlertDialogDescription>
                     </AlertDialogHeader>
                     <AlertDialogFooter>
@@ -349,8 +349,8 @@ const CategoriesPage = () => {
                         </AlertDialogDescription>
                     </AlertDialogHeader>
                     <AlertDialogFooter>
-                        <AlertDialogCancel className='bg-gray-900 hover:bg-blue-900 text-gray-100 hover:text-gray-100'>Cancelar</AlertDialogCancel>
-                        <AlertDialogAction className='bg-red-500 hover:bg-red-700' onClick={() => deleteCategory(selectedCategoryToDelete?.id)}>Eliminar</AlertDialogAction>
+                        <AlertDialogCancel className='bg-blue-500 hover:bg-blue-600 text-gray-100 hover:text-gray-100 font-bold'>Cancelar</AlertDialogCancel>
+                        <AlertDialogAction className='bg-rose-500 hover:bg-red-600 font-bold' onClick={() => deleteCategory(selectedCategoryToDelete?.id)}>Eliminar</AlertDialogAction>
                     </AlertDialogFooter>
                 </AlertDialogContent>
             </AlertDialog>
