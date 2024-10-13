@@ -15,7 +15,7 @@ export type Admin = {
     role: string
 }
 
-export type Usuario = {
+export type Bibliotecario = {
     id: string
     nombres: string
     apellidos: string
@@ -39,5 +39,7 @@ export type Libro = {
     id: string
     titulo: string
     descripcion: string
+    autores: Autor[]
+    categorias: Categoria[]
     fecha_publicacion: string
 }
